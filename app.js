@@ -1,6 +1,7 @@
 const app = {
     data () {
         return {
+            title: 'Curso de Vue 3',
             name: 'Carlos',
             lastName: 'Ferreira',
             products: [
@@ -16,7 +17,13 @@ const app = {
                     image: './assets/images/imagem-02.jpeg',
                     stars: 0
                 }
-            ]
+            ],
+            cart: [],
+        }
+    },
+    methods: {
+        addCart (product) {
+            this.cart.push(product)
         }
     }
 }

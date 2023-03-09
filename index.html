@@ -9,9 +9,13 @@
     <body>
 
         <div id="app">
-            <h1>Curso de Vue 3</h1>
+            <h1>{{ title }}</h1>
 
             <p>{{ name }} {{ lastName }}</p>
+
+            <hr>
+
+            <h3>Carrinho {{ cart.length }}</h3>
 
             <ul>
                 <li v-for="(product, index) in products" :key="index">
@@ -22,6 +26,8 @@
                     <strong v-if="product.stars > 0">{{ product.stars }}</strong>
 
                     <br><br>
+
+                    <a href="#" v-on:click.prevent="addCart(product)">ADD CART</a>
                 </li>
             </ul>
 
