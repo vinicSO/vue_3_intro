@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Curso de Vue 3</title>
+
+        <link rel="stylesheet" href="./assets/styles.css">
     </head>
     <body>
 
@@ -35,12 +37,9 @@
 
                         <br><br>
 
-                        <a href="#" v-on:click.prevent="addCart(product)" v-if="!inCart(product)">
+                        <button @click.prevent="addCart(product)" :disabled="inCart(product)" :class="[{'button-disabled' : inCart(product)}, 'color']">
                             ADD CART
-                        </a>
-                        <a href="#" v-on:click.prevent="removeCart(product)" v-else>
-                            REMOVE CART
-                        </a>
+                        </button>
                     </li>
                 </ul>
 
