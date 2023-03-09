@@ -19,6 +19,11 @@ const app = {
                 }
             ],
             cart: [],
+            styles: {
+                'background-color': '#000',
+                'color': '#fff'
+            },
+            theme: true
         }
     },
 
@@ -26,11 +31,25 @@ const app = {
         addCart (product) {
             this.cart.push(product)
         },
+
         inCart (product) {
             return this.cart.indexOf(product) != -1
         },
+
         removeCart (product) {
             this.cart = this.cart.filter(e => e != product)
+        },
+
+        toggleTheme () {
+            this.theme = !this.theme
+
+            if (this.theme) {
+                this.styles.backgroundColor = '#000'
+                this.styles.color = '#fff'
+            } else {
+                this.styles.backgroundColor = '#fff'
+                this.styles.color = '#000'
+            }
         }
     },
 
