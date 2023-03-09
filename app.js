@@ -24,6 +24,12 @@ const app = {
     methods: {
         addCart (product) {
             this.cart.push(product)
+        },
+        inCart (product) {
+            return this.cart.indexOf(product) != -1
+        },
+        removeCart (product) {
+            this.cart = this.cart.filter(e => e != product)
         }
     }
 }

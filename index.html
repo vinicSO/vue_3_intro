@@ -27,7 +27,12 @@
 
                     <br><br>
 
-                    <a href="#" v-on:click.prevent="addCart(product)">ADD CART</a>
+                    <a href="#" v-on:click.prevent="addCart(product)" v-if="!inCart(product)">
+                        ADD CART
+                    </a>
+                    <a href="#" v-on:click.prevent="removeCart(product)" v-else>
+                        REMOVE CART
+                    </a>
                 </li>
             </ul>
 
