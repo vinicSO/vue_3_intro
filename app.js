@@ -21,6 +21,7 @@ const app = {
             cart: [],
         }
     },
+
     methods: {
         addCart (product) {
             this.cart.push(product)
@@ -30,6 +31,12 @@ const app = {
         },
         removeCart (product) {
             this.cart = this.cart.filter(e => e != product)
+        }
+    },
+
+    computed: {
+        fullName () {
+            return this.name + ' ' + this.lastName
         }
     }
 }
