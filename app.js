@@ -3,18 +3,20 @@ const app = {
         return {
             name: 'Carlos',
             lastName: 'Ferreira',
-            product: {
-                title: 'Filme 01',
-                description: 'Filme muito legal',
-                image: './assets/images/imagem-01.jpeg',
-                stars: 3,
-            },
-            product2: {
-                title: 'Filme 02',
-                description: 'Filme muito legal (2)',
-                image: './assets/images/imagem-02.jpeg',
-                stars: 0
-            }
+            products: [
+                {
+                    title: 'Filme 01',
+                    description: 'Filme muito legal',
+                    image: './assets/images/imagem-01.jpeg',
+                    stars: 3,
+                },
+                {
+                    title: 'Filme 02',
+                    description: 'Filme muito legal (2)',
+                    image: './assets/images/imagem-02.jpeg',
+                    stars: 0
+                }
+            ]
         }
     }
 }
