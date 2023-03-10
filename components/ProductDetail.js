@@ -24,6 +24,10 @@ const productDetail = {
         }
     },
 
+    emits: [
+        'add-cart'
+    ],
+
     data () {
         return {
             example: 13
@@ -33,6 +37,7 @@ const productDetail = {
     methods: {
         addCart (product) {
             console.log('Add Cart in component!')
+            this.$emit('add-cart', product)
         },
 
     },
